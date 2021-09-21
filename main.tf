@@ -27,7 +27,7 @@ variable "database_subnets" {
 #############################################################################
 
 provider "aws" {
-  version = "~> 2.0"
+  version = "~> 3.0"
   region  = var.region
 }
 
@@ -43,7 +43,7 @@ data "aws_availability_zones" "azs" {}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "2.33.0"
+  version = "3.7.0"
 
   name = "dev-vpc"
   cidr = var.vpc_cidr_range
